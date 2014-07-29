@@ -72,11 +72,3 @@ tests we are including the GschoolEnumerable module into the Array class. Once
 we do that, we have access to all the instance methods we define in the
 GschoolEnumerable class on each Array instance in our tests.
 
-## Blocks
-
-
-
-
-
-
-
