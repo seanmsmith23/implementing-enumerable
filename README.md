@@ -13,5 +13,5 @@ to make sure that we don't interfere with Ruby's built in methods.
 - g_select
 - g_reject
 - g_map
-- g_first
+- g_find
 - g_select!
