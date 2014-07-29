@@ -62,8 +62,8 @@ last_name method. If you included this module in the following class
 Then instances of the Person class would have respond to an instance method called
 `full_name`
 
-   hunter = Person.new("Hunter", "G")
-   puts hunter.full_name   # => "Hunter G"
+    hunter = Person.new("Hunter", "G")
+    puts hunter.full_name   # => "Hunter G"
 
 Nice!
 
