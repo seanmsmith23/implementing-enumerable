@@ -18,15 +18,9 @@ describe GschoolEnumerable do
 
   describe "#g_select" do
     it "acts like select" do
-      #values = [1,2,3].g_select do |value|
-      #  value % 2 == 0
-      #end
-
       values = [1,2,3].g_select do |value|
-        value == "khasohf"
+        value % 2 == 0
       end
-
-      p values
 
       expect(values).to eq([2])
     end
