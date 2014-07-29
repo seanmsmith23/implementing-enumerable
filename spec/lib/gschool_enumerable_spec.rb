@@ -25,6 +25,7 @@ describe GschoolEnumerable do
 
   describe "#g_reject" do
     it "acts like reject" do
+      skip
       values = [1, 2, 3].g_reject { |value| value % 2 == 0 }
 
       expect(values).to eq([1, 3])
@@ -37,6 +38,22 @@ describe GschoolEnumerable do
       values = [1, 2, 3].g_map { |value| value * 2 }
 
       expect(values).to eq([2, 4, 6])
+    end
+  end
+
+  describe "#g_find" do
+    it "acts like find" do
+      skip
+      value = [1, 2, 3].g_find { |value| value % 2 != 0 }
+
+      expect(value).to eq(1)
+    end
+
+    it "returns nil if nothing is found" do
+      skip
+      value = [1, 2, 3].g_find { |value| value > 5 }
+
+      expect(value).to eq(nil)
     end
   end
 end
