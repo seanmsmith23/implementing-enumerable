@@ -18,11 +18,22 @@ describe GschoolEnumerable do
 
   describe "#g_select" do
     it "acts like select" do
+      skip
       values = [1,2,3].g_select do |value|
         value % 2 == 0
       end
 
       expect(values).to eq([2])
+    end
+  end
+
+  describe "#g_reject" do
+    it "acts like reject" do
+      values = [1,2,3].g_reject do |value|
+        value % 2 == 0
+      end
+
+      expect(values).to eq([1, 3])
     end
   end
 end
