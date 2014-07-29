@@ -8,32 +8,27 @@ describe GschoolEnumerable do
     it "yields each element to the block in the same order" do
       yielded = []
 
-      [1,2,3].g_each do |value|
-        yielded << value
-      end
+      [1, 2, 3].g_each { |value| yielded << value }
 
-      expect(yielded).to eq([1,2,3])
+      expect(yielded).to eq([1, 2, 3])
     end
   end
 
   describe "#g_select" do
     it "acts like select" do
       skip
-      values = [1,2,3].g_select do |value|
-        value % 2 == 0
-      end
+      values = [1, 2, 3].g_select { |value| value % 2 == 0 }
 
       expect(values).to eq([2])
     end
   end
 
-  describe "#g_reject" do
-    it "acts like reject" do
-      values = [1,2,3].g_reject do |value|
-        value % 2 == 0
-      end
+  describe "#g_map" do
+    it "acts like map" do
+      skip
+      values = [1, 2, 3].g_map { |value| value * 2 }
 
-      expect(values).to eq([1, 3])
+      expect(values).to eq([2, 4, 6])
     end
   end
 end
