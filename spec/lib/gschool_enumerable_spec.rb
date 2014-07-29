@@ -56,4 +56,15 @@ describe GschoolEnumerable do
       expect(value).to eq(nil)
     end
   end
+
+  describe "#g_select!" do
+    it "acts like select!" do
+      skip
+      items = [1, 2, 3]
+
+      items.g_select! { |value| value % 2 == 0 }
+
+      expect(items).to eq([2])
+    end
+  end
 end
