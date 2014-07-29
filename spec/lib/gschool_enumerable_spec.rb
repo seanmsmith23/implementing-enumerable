@@ -23,6 +23,14 @@ describe GschoolEnumerable do
     end
   end
 
+  describe "#g_reject" do
+    it "acts like reject" do
+      values = [1, 2, 3].g_reject { |value| value % 2 == 0 }
+
+      expect(values).to eq([1, 3])
+    end
+  end
+
   describe "#g_map" do
     it "acts like map" do
       skip
